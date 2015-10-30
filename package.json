@@ -20,11 +20,15 @@
     "pretest": "standard src",
     "test": "babel-node test/commit-msg.js | tap-spec"
   },
+  "hooks": {
+    "pre-commit": "npm test -s"
+  },
   "dependencies": {},
   "devDependencies": {
     "babel": "^5.8.23",
+    "hook-script-runner": "0.0.1",
+    "standard": "^5.1.0",
     "tap-spec": "^4.1.0",
-    "tape": "^4.2.1",
-    "standard": "^5.1.0"
+    "tape": "^4.2.1"
   }
 }
