@@ -1,7 +1,7 @@
 {
-  "name": "hs-commit-message",
+  "name": "hs-commit-msg",
   "version": "0.0.0",
-  "description": "Check your commit messages before commiting",
+  "description": "Check your commit msgs before commiting",
   "license": "MIT",
   "author": {
     "name": "M. Maxwell Watson",
@@ -9,16 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/attn/hs-commit-message.git"
+    "url": "git+ssh://git@github.com/attn/hs-commit-msg.git"
   },
   "bugs": {
-    "url": "https://github.com/attn/hs-commit-message/issues"
+    "url": "https://github.com/attn/hs-commit-msg/issues"
   },
-  "homepage": "https://github.com/attn/hs-commit-message#readme",
+  "homepage": "https://github.com/attn/hs-commit-msg#readme",
   "scripts": {
-    "prepublish": "babel src/hs-commit-message.js --out-file hs-commit-message.js",
+    "prepublish": "babel src/commit-msg.js --out-file hs-commit-msg.js",
     "pretest": "standard src",
-    "test": "babel-node test/hs-commit-message.js | tap-spec"
+    "test": "babel-node test/commit-msg.js | tap-spec"
   },
   "dependencies": {},
   "devDependencies": {
