@@ -1,8 +1,9 @@
 import fs from 'fs'
 
 export const formats = {
-  base () {
-    return true
+  base (message) {
+    const lines = message.split('\n')
+    return lines[0].length <= 50
   }
 }
 
