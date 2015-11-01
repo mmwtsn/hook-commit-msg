@@ -14,6 +14,7 @@ test('.check()', t => {
 
   index.check('base', './test/fixtures/COMMIT_EDITMSG')
 
+  t.throws(() => { index.check('nein')}, 'calls an existing format')
   t.assert(readFileSync.calledOnce, 'calls fs.readFileSync')
   t.assert(base.calledOnce, 'calls formats.base')
   t.end()
