@@ -1,7 +1,7 @@
 import fs from 'fs'
 import test from 'tape'
 import sinon from 'sinon'
-import index from '../src/commit-msg'
+import index, {formats} from '../src/commit-msg'
 
 test('index', t => {
   t.equal(typeof index, 'object', 'default export is an object')
@@ -10,9 +10,11 @@ test('index', t => {
 
 test('.check()', t => {
   const readFileSync = sinon.stub(fs, 'readFileSync')
+  const base = sinon.stub(formats, 'base')
 
   index.check()
 
   t.assert(readFileSync.calledOnce, 'calls fs.readFileSync')
+  t.assert(base.calledOnce, 'calls formats.base')
   t.end()
 })
