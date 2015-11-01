@@ -12,7 +12,7 @@ test('.check()', t => {
   const readFileSync = sinon.stub(fs, 'readFileSync')
   const base = sinon.stub(formats, 'base')
 
-  index.check()
+  index.check('base', './test/fixtures/COMMIT_EDITMSG')
 
   t.assert(readFileSync.calledOnce, 'calls fs.readFileSync')
   t.assert(base.calledOnce, 'calls formats.base')
