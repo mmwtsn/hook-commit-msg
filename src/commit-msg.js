@@ -3,9 +3,9 @@ import fs from 'fs'
 export const formats = {
   base (message) {
     const results = message.split('\n').map((line, i) => {
-      if (i === 0 && line.length >= 51) return false
-      if (i === 1 && line.length > 0) return false
-      if (i > 1 && line.length >= 73) return false
+      if (i === 0 && line.length >= 51) throw new Error('Subject must be 50 characters or less')
+      if (i === 1 && line.length > 0) throw new Error('Subject must be followed by a blank line')
+      if (i > 1 && line.length >= 73) throw new Error('Description must be 72 characters or less')
 
       return true
     })
