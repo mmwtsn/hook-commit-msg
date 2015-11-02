@@ -29,34 +29,31 @@ test('formats', t => {
 })
 
 test('formats.base()', t => {
-  t.equal(formats.base(buildString(10)), true, 'first line can be under 50')
-  t.equal(formats.base(buildString(50)), true, 'first line can be equal to 50')
+  t.assert(typeof formats.base, 'is a function')
+
+  t.equal(formats.base(buildString(10)), true, 'subject can be under 50')
+  t.equal(formats.base(buildString(50)), true, 'subject can be equal to 50')
 
   t.throws(() => {
     formats.base(buildString(51))
-  }, 'first line cannot be over 50')
+  }, 'subject cannot be over 50')
 
   t.throws(() => {
     formats.base([buildString(10), buildString(10)].join('\n'))
-  }, 'second line cannot be used')
-
-  t.equal(formats.base(
-    [buildString(10), '\n'].join('\n')
-  ), true, 'second line can be blank')
+  }, 'subject must be followed by a blank line')
 
   t.equal(formats.base(
     [buildString(10), '\n', buildString(71)].join('\n')
-  ), true, 'third line can be under 72')
+  ), true, 'description can be under 72')
 
   t.equal(formats.base(
     [buildString(10), '\n', buildString(72)].join('\n')
-  ), true, 'third line can be equal to 72')
+  ), true, 'description can be equal to 72')
 
   t.throws(() => {
     formats.base([buildString(10), '\n', buildString(73)].join('\n'))
-  }, 'third line cannot be over 72')
+  }, 'description cannot be over 72')
 
-  t.assert(typeof formats.base, 'is a function')
   t.end()
 })
 
