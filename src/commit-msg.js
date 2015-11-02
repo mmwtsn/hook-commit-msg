@@ -2,8 +2,15 @@ import fs from 'fs'
 
 export const formats = {
   base (message) {
-    const lines = message.split('\n')
-    return lines[0].length <= 50
+    const results = message.split('\n').map((line, i) => {
+      if (i === 0 && line.length >= 51) return false
+      if (i === 1 && line.length > 0) return false
+      if (i > 1 && line.length >= 73) return false
+
+      return true
+    })
+
+    return results.every(result => result)
   }
 }
 
