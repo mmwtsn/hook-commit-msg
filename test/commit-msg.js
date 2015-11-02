@@ -29,9 +29,9 @@ test('formats', t => {
 })
 
 test('formats.base()', t => {
-  const under = '..........' // 10
-  const equal = '..................................................' // 50
-  const over = '...................................................' // 51
+  const under = buildString(10)
+  const equal = buildString(50)
+  const over = buildString(51)
 
   t.equal(formats.base(under), true)
   t.equal(formats.base(equal), true)
@@ -39,3 +39,13 @@ test('formats.base()', t => {
   t.assert(typeof formats.base, 'is a function')
   t.end()
 })
+
+function buildString (length) {
+  let string = ''
+
+  for (let i = 0; i < length; i++) {
+    string += '_'
+  }
+
+  return string
+}
