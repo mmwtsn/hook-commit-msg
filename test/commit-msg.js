@@ -39,6 +39,10 @@ test('formats.base()', t => {
   }, 'subject cannot be over 50')
 
   t.throws(() => {
+    formats.base('err.')
+  }, 'subject cannot end with a period')
+
+  t.throws(() => {
     formats.base([buildString(10), buildString(10)].join('\n'))
   }, 'subject must be followed by a blank line')
 
