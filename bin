@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+try {
+  require('./check').check(process.argv[2], process.argv[3])
+} catch (err) {
+  console.log('Aborting commit!')
+  console.log(err.message)
+  process.exit(1)
+}
