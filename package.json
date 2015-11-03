@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/attn/hs-commit-msg#readme",
   "scripts": {
-    "prepublish": "babel src/commit-msg.js --out-file hs-commit-msg.js",
+    "prepublish": "babel src -d .",
     "pretest": "standard src/* test/*",
     "test": "babel-tape-runner test/*.js | tap-spec"
   },
