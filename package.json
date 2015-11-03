@@ -15,7 +15,7 @@
     "url": "https://github.com/mmwtsn/hs-commit-msg/issues"
   },
   "homepage": "https://github.com/mmwtsn/hs-commit-msg#readme",
-  "bin": "./bin",
+  "bin": "./dist/bin",
   "scripts": {
     "prepublish": "babel src -d .",
     "pretest": "standard src/* test/*",
