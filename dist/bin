@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 
+var red = require('chalk').red
+var check = require('./check').check
+
 try {
-  require('./check').check(process.argv[2], process.argv[3])
+  check(process.argv[2], process.argv[3])
 } catch (err) {
-  console.log('Aborting commit!')
-  console.log(err.message)
+  console.log('[' + red('ERR') + '] ' + err.message)
   process.exit(1)
 }
