@@ -12,11 +12,14 @@ test('index', t => {
 test('index.check()', t => {
   const readFileSync = sinon.stub(fs, 'readFileSync')
   const base = sinon.stub(formats, 'base')
+  const path = './test/fixtures/COMMIT_EDITMSG'
 
-  index.check('base', './test/fixtures/COMMIT_EDITMSG')
+  index.check('base', path)
 
   t.throws(() => { index.check('nein')}, 'calls an existing format')
   t.assert(readFileSync.calledOnce, 'calls fs.readFileSync')
+  t.same(readFileSync.firstCall.args[0], path, 'calls with correct file path')
+  t.same(readFileSync.firstCall.args[1], 'utf8', 'calls with correct encoding')
   t.assert(base.calledOnce, 'calls formats.base')
 
   formats.base.restore()

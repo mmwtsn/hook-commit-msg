@@ -7,6 +7,6 @@ export default {
       throw new Error('Requested format does not exist.')
     }
 
-    return formats[format](fs.readFileSync(file))
+    return formats[format](fs.readFileSync(file, 'utf8'))
   }
 }
