@@ -15,6 +15,7 @@
     "url": "https://github.com/attn/hs-commit-msg/issues"
   },
   "homepage": "https://github.com/attn/hs-commit-msg#readme",
+  "bin": "./bin",
   "scripts": {
     "prepublish": "babel src -d .",
     "pretest": "standard src/* test/*",
