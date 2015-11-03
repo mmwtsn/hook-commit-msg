@@ -17,7 +17,7 @@
   "homepage": "https://github.com/mmwtsn/hs-commit-msg#readme",
   "bin": "./dist/bin",
   "scripts": {
-    "prepublish": "babel src -d .",
+    "prepublish": "babel src -d ./dist",
     "pretest": "standard src/* test/*",
     "test": "babel-tape-runner test/*.js | tap-spec"
   },
