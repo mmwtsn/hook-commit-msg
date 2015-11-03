@@ -22,7 +22,8 @@
     "test": "babel-tape-runner test/*.js | tap-spec"
   },
   "hooks": {
-    "pre-commit": "npm test -s"
+    "pre-commit": "npm test -s",
+    "commit-msg": "./dist/bin base ./.git/COMMIT_EDITMSG"
   },
   "dependencies": {
     "chalk": "^1.1.1"
