@@ -1,6 +1,6 @@
 {
   "name": "hook-commit-msg",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Check your commit messages before commiting",
   "license": "MIT",
   "author": {
