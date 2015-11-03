@@ -1,5 +1,6 @@
 import test from 'tape'
 import formats from '../src/formats'
+import {buildString} from './helpers'
 
 test('formats', t => {
   t.equal(typeof formats, 'object', 'is an object')
@@ -38,13 +39,3 @@ test('formats.base()', t => {
 
   t.end()
 })
-
-function buildString (length) {
-  let string = ''
-
-  for (let i = 0; i < length; i++) {
-    string += '_'
-  }
-
-  return string
-}
