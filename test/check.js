@@ -1,7 +1,7 @@
 import fs from 'fs'
 import test from 'tape'
 import sinon from 'sinon'
-import index from '../src/commit-msg'
+import index from '../src/check'
 import formats from '../src/formats'
 
 test('index', t => {
