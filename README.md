@@ -1,4 +1,4 @@
-# hs-commit-msg
+# hook-commit-msg
 
 [![wercker status](https://app.wercker.com/status/7175563270c6d6a2307fbe02f40a0be1/s/master "wercker status")](https://app.wercker.com/project/bykey/7175563270c6d6a2307fbe02f40a0be1)
 
@@ -9,14 +9,14 @@ A [Hook Script Runner](https://github.com/mmwtsn/hook-script-runner) script for 
 Install the [Hook Script Runner](https://github.com/mmwtsn/hook-script-runner) and this module within an existing project that has been Git initialized:
 
 ```
-$ npm install --save-dev hook-script-runner hs-commit-msg
+$ npm install --save-dev hook-script-runner hook-commit-msg
 ```
 
 Update your project's package.json to call the linter on commit:
 
 ```
 "hooks": {
-  "commit-msg": "hs-commit-msg"
+  "commit-msg": "hook-commit-msg"
 },
 ```
 

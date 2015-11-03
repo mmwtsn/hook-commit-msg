@@ -1,5 +1,5 @@
 {
-  "name": "hs-commit-msg",
+  "name": "hook-commit-msg",
   "version": "0.0.0",
   "description": "Check your commit messages before commiting",
   "license": "MIT",
@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/mmwtsn/hs-commit-msg.git"
+    "url": "git+ssh://git@github.com/mmwtsn/hook-commit-msg.git"
   },
   "bugs": {
-    "url": "https://github.com/mmwtsn/hs-commit-msg/issues"
+    "url": "https://github.com/mmwtsn/hook-commit-msg/issues"
   },
-  "homepage": "https://github.com/mmwtsn/hs-commit-msg#readme",
+  "homepage": "https://github.com/mmwtsn/hook-commit-msg#readme",
   "bin": "./dist/bin",
   "scripts": {
     "prepublish": "babel src -d ./dist",
