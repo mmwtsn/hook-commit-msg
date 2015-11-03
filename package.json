@@ -24,7 +24,9 @@
   "hooks": {
     "pre-commit": "npm test -s"
   },
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^1.1.1"
+  },
   "devDependencies": {
     "babel": "^5.8.23",
     "babel-tape-runner": "^1.2.0",
